@@ -92,8 +92,9 @@ This repository contains **SoundCloud Clone CMS**, an academic project developed
 * [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 * [![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.com/)
 * [![Google reCAPTCHA](https://img.shields.io/badge/reCAPTCHA-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/recaptcha)
-* **OpenStreetMap / Nominatim API** (Geocoding)
-* **PHPMailer** (SMTP Integration)
+* [![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org/)
+* [![Nominatim](https://img.shields.io/badge/Nominatim_API-FF69B4?style=for-the-badge)](https://nominatim.org/)
+* [![PHPMailer](https://img.shields.io/badge/PHPMailer-8A2BE2?style=for-the-badge&logo=php&logoColor=white)](https://github.com/PHPMailer/PHPMailer)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
