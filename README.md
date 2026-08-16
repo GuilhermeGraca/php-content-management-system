@@ -52,7 +52,13 @@
 ## About The Project
 
 <div align="center">
-  <video src="preview/previewSGCsystem.mp4" width="800" controls></video>
+
+
+https://github.com/user-attachments/assets/87f99139-00bb-45c6-8f0c-79319b2c6462
+
+
+
+
   <br />
   <p align="center">
     <em>If the embedded video above is not displaying correctly, <a href="preview/previewSGCsystem.mp4"><strong>click here to watch/download the video demo »</strong></a></em>
