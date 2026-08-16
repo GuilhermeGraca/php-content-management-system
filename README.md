@@ -146,13 +146,20 @@ Follow these instructions to set up a local copy of the project on your machine.
    cd php-content-management-system
    ```
 3. **Configure the credentials**:
-   Rename the `credenciais.exemplo.php` file to `credenciais.php`. Fill in your SMTP details and Google reCAPTCHA keys if you want to test email and registration features.
-4. **Start the environment (Docker)**:
+   Inside the `src/` folder, rename the `credenciais.exemplo.php` file to `credenciais.php`. Fill in your SMTP details and Google reCAPTCHA keys if you want to test email and registration features.
+
+4. **Start the environment**:
+
+   **Using Docker (Recommended)**:
    ```sh
    docker-compose up -d
    ```
-5. **Access the application**:
-   Open your browser and navigate to `http://localhost:8080`.
+   Access the application at `http://localhost:8080`.
+
+   **Using XAMPP**:
+   - Copy the contents of the `src/` folder into your XAMPP `htdocs` directory.
+   - Create a database named `bd_soundcloud_pt` and import `database/base_dados.sql`.
+   - Access the application at `http://localhost/your-folder-name`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

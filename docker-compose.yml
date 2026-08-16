@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./:/var/www/html
+      - ./src:/var/www/html
     environment:
       - DB_HOST=db
       - DB_USER=root
