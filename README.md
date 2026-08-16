@@ -109,6 +109,7 @@ This repository contains **SoundCloud Clone CMS**, an academic project developed
 <!-- LESSONS LEARNED -->
 ## Lessons Learned
 
+* **Server-Side Architecture**: Understanding the client-server model, where PHP executes logic and interacts with the database exclusively on the server before generating and returning the final HTML to the user's browser.
 * **Server-Side File Processing**: Handling binary file uploads, extracting ZIP archives, and safely parsing XML metadata with PHP SimpleXML.
 * **Relational Database Integrity**: Designing MySQL schemas with cascading foreign keys to securely link users, audio content, genres, and geographic regions.
 * **Web Security Principles**: Applying the principle of least privilege, preventing SQL Injection with prepared statements, and securely validating user sessions.
