@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<album>
+  <faixa>
+    <ficheiro>exemplo_musica.mp3</ficheiro>
+    <capa>exemplo_capa.jpg</capa>
+    <titulo>Noite no Bairro</titulo>
+    <descricao>Beat trap com influências de fado urbano</descricao>
+    <estilo>Trap</estilo>
+    <visibilidade>publico</visibilidade>
+  </faixa>
+  <faixa>
+    <ficheiro>concerto.png</ficheiro>
+    <titulo>Cartaz do Concerto - Ruas de Lisboa</titulo>
+    <descricao>Cartaz promocional</descricao>
+    <visibilidade>publico</visibilidade>
+  </faixa>
+</album>

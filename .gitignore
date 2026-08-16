@@ -1,0 +1,12 @@
+# Ignorar credenciais sensíveis
+credenciais.php
+
+# Ignorar conteúdo da pasta de uploads (não queremos ficheiros mp3/jpg no repositório)
+/uploads/*
+!/uploads/.gitkeep
+/vendor/
+/node_modules/
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,479 @@
+/* --- Style/style.css --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+    /* Paleta de Cores Stich.ai */
+    --color-primary: #FF5500;
+    --color-secondary: #00D1FF;
+    --color-tertiary: #00E676;
+    --color-neutral: #0A0A0C;
+    --color-surface: #141416;
+    /* Ligeiramente mais claro que o neutral para caixas */
+    --color-card-bg: linear-gradient(180deg, #182A45 0%, #111114 100%);
+    --color-text-main: #FFFFFF;
+    --color-text-muted: #8E8E93;
+    --color-border: #2C2C2E;
+
+    /* Tipografia */
+    --font-headline: 'Montserrat', sans-serif;
+    --font-body: 'Hanken Grotesk', sans-serif;
+}
+
+/* Fundo da página e Tipografia Base */
+body {
+    background-color: var(--color-neutral);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.font-headline {
+    font-family: var(--font-headline);
+}
+
+/* Custom Scrollbar para combinar com o tema */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-neutral);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* --- Botões Customizados --- */
+.btn-laranja {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-laranja:hover {
+    background-color: #e64a00;
+    color: white;
+}
+
+.btn-outline-laranja {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn-outline-laranja:hover {
+    background-color: rgba(255, 85, 0, 0.1);
+    color: var(--color-primary);
+}
+
+.btn-verde {
+    background-color: var(--color-tertiary);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-verde:hover {
+    background-color: #00c968;
+    color: #000;
+}
+
+/* --- Navbar --- */
+.navbar-custom {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 0;
+}
+
+.navbar-brand i {
+    color: #8C62FF;
+    /* Cor da nota musical no logo */
+    margin-right: 8px;
+}
+
+/* Pesquisa Navbar */
+.search-input-custom {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text-main);
+    border-radius: 6px 0 0 6px;
+}
+
+.search-input-custom:focus {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.search-input-custom::placeholder {
+    color: #6c757d;
+}
+
+.search-btn-custom {
+    border-radius: 0 6px 6px 0;
+}
+
+/* --- Filtros --- */
+.filtros-box {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.filtros-box label {
+    font-family: var(--font-headline);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text-main);
+}
+
+.form-select-custom {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--color-text-main);
+}
+
+.form-select-custom:focus {
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+/* Estilo das opções no select escuro */
+.form-select-custom option {
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+}
+
+/* --- Montra de Conteúdos (Cards) --- */
+.conteudo-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: #3A3A3C;
+}
+
+.conteudo-img-wrapper {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    /* O gradiente do card faz o fundo */
+}
+
+.conteudo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.conteudo-audio-capa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.conteudo-audio-capa i {
+    font-size: 80px;
+    color: #8C62FF;
+    /* Roxo para a nota musical no placeholder */
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.card-body-custom {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(10, 10, 12, 0.6);
+    /* Escurece a base do texto */
+}
+
+.card-title-custom {
+    font-family: var(--font-headline);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-author-custom {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.card-author-custom span {
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.card-desc-custom {
+    font-size: 0.85rem;
+    color: #B0B0B0;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.badges-wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Badge com Outline Laranja */
+.badge-outline-laranja {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* --- Player de Áudio --- */
+.custom-audio-player {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    /* Inverter cores nativas e forçar tom escuro no Chrome/Webkit */
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    border-radius: 30px;
+}
+
+.card-date-custom {
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+/* --- Mapa de Concertos --- */
+#mapaConcertos {
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: var(--color-surface);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+}
+
+.leaflet-popup-tip {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.leaflet-popup-content strong {
+    color: var(--color-primary);
+}
+
+/* --- Outros Ajustes Universais --- */
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+/* --- Login e Registo (Glassmorphism) --- */
+.bg-soundwave {
+    background-color: var(--color-neutral);
+    background-image: url('img/login_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+
+.bg-soundwave::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(37, 18, 55, 0.3);
+    /* Purple overlay */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: -1;
+}
+
+.glass-box {
+    background: rgba(30, 30, 32, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.05) inset;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.glass-box h2 {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.input-icon-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #E0E0E0;
+    display: block;
+}
+
+.input-icon-group i {
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    color: #8E8E93;
+    font-size: 1rem;
+}
+
+.input-icon-group .form-control {
+    background-color: #141416;
+    border: 1px solid var(--color-border);
+    color: white;
+    padding-left: 45px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.input-icon-group .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.input-icon-group .form-control:focus,
+.form-control-custom:focus {
+    background-color: #1A1A1E;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.2);
+    color: white !important;
+}
+
+.glass-box .btn-laranja {
+    height: 48px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* --- Paineis de Dashboard (Full Width Glassmorphism) --- */
+.glass-panel {
+    background: rgba(30, 30, 32, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.05) inset;
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.glass-panel h3 {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+/* Inputs Escuros genéricos sem ícones */
+.form-control-custom {
+    background-color: #141416;
+    border: 1px solid var(--color-border);
+    color: white;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.form-control-custom::placeholder {
+    color: #6c757d;
+}
+
+/* Fix para os botões de input file nativos do browser */
+.form-control-custom::file-selector-button {
+    background-color: #2a2a2e;
+    color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-control-custom::file-selector-button:hover {
+    background-color: #3f3f45;
+}
+
+/* Tabelas Transparentes */
+.table-custom {
+    color: #E0E0E0;
+    border-color: var(--color-border);
+}
+
+.table-custom th,
+.table-custom td {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 10px;
+    vertical-align: middle;
+}
+
+.table-custom thead th {
+    font-family: var(--font-headline);
+    font-size: 0.85rem;
+    color: #fff;
+    border-bottom: 2px solid var(--color-border);
+}
